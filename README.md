@@ -12,9 +12,8 @@
 3. 运行程序，输入账号密码，确保账号密码正确，否则会导致死循环，再输入课群组号，浙理为3665127
 4. 刷新网页，并依次提交答案
 ## 下面是手把手教学
-下载Python，[点击下载Python3.9.6](https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe)，安装时注意勾选Add to PAATH
+下载Python，[点击下载Python3.9.6](https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe)，安装时注意勾选Add to PATH
 ![install python](https://user-images.githubusercontent.com/53895652/129552654-b17ec7c5-db08-4612-880a-9d69779c719e.png)
-
 打开powershell，不知道什么是powershell？没事，按下win键输入powershell即可
 ![powershell_1](https://user-images.githubusercontent.com/53895652/129552846-68d04087-c42d-4632-bcff-eb19d3166515.png)
 在powershell弹出的框框中输入pip install ddddocr -i https://pypi.tuna.tsinghua.edu.cn/simple 后回车，等待模块安装完成
