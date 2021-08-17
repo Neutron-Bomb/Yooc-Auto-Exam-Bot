@@ -16,7 +16,7 @@
 ![install python](https://user-images.githubusercontent.com/53895652/129552654-b17ec7c5-db08-4612-880a-9d69779c719e.png)
 打开powershell，不知道什么是powershell？没事，按下win键输入powershell即可
 ![powershell_1](https://user-images.githubusercontent.com/53895652/129552846-68d04087-c42d-4632-bcff-eb19d3166515.png)
-在powershell弹出的框框中输入pip install ddddocr -i https://pypi.tuna.tsinghua.edu.cn/simple 后回车，等待模块安装完成
+在powershell弹出的框框中输入pip install ddddocr -i https://pypi.tuna.tsinghua.edu.cn/simple (若没有安装requests: pip install requests -i https://pypi.tuna.tsinghua.edu.cn/simple)后回车，等待模块安装完成
 ![powershell_2](https://user-images.githubusercontent.com/53895652/129553029-7e4b23e9-16f1-44bb-88f6-84fa0bf1f9c9.png)
 下载本软件，并解压！
 ![download](https://user-images.githubusercontent.com/53895652/129553218-9d53e6ba-4e0e-46bf-8af5-1085a2381791.png)
