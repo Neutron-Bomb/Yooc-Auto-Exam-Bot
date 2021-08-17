@@ -128,6 +128,9 @@ class YoocBot:
 
     def __repeat_exam(self,examid:str):
         pass
+
+    def __start_exam(self,examid:str):
+        pass
     
     def compile_and_submit(self,examid:str):
         ans = self.__generate_answer(examid)
