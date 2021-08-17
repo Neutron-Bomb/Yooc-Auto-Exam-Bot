@@ -8,7 +8,7 @@
 
 # 使用方法
 前提条件：易班考试为可查试题答案，如果是禁止查卷，则无法使用本程序。
-1. 安装Python,打开powershell输入pip install ddddocr 或者 pip install -r requirements.txt
+1. 安装Python,打开powershell输入pip install ddddocr && pip install requests或者 pip install -r requirements.txt(后者需切换到requirements.txt所在目录)
 2. 登录易班，进入考试界面，将所有考试同时开启，若已完成可忽略
 3. 运行程序，输入账号密码，确保账号密码正确，否则会导致死循环，再输入课群组号，浙理为3665127
 4. 刷新网页，并依次提交答案
@@ -17,7 +17,7 @@
 # 注意事项
 1. 若存在填空题，程序会输出填空题的所有答案，将其填入题目横线内即可
 2. 程序支持直接提交，建议有动手能力的人直接查看源代码
-
+3. 若遇到ddddocr库报错问题，请安装visual redistribution 2019运行库
 # 免责声明
 1. 由于本程序产生的所有纠纷与本人无关
 2. 由于使用本程序导致的一切后果与本人无关
