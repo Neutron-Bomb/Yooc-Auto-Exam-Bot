@@ -13,6 +13,8 @@ def main():
 
         for exam in yb.get_exam_list():
             print(exam,':',yb.compile_and_save(exam))
+            # 删除上面一行，关闭下一行的注释将会导致直接提交答案
+            # print(exam,':',yb.compile_and_submit(exam))
         print('请刷新网站查看并提交')
     
 if __name__ == '__main__':
