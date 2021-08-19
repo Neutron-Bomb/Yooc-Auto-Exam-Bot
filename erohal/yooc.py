@@ -22,7 +22,9 @@ class YoocBot:
             'captcha_img' : 'https://www.yooc.me/captcha/image/{}/',
             'exam_list_1' : 'https://www.yooc.me/group/{}/exams',
             'exam_list_2' : 'https://www.yooc.me/group/{}/exam/(.*?)/edit',
-            'repeat_exam' : 'https://www.yooc.me/group/3665127/exam/214471/examuser//repeat'
+            'repeat_exam' : 'https://www.yooc.me/group/3665127/exam/214471/examuser//repeat',
+            'course_list' : 'https://www.yooc.me/group/{}/courses?show_process=&page={}',
+            'course_item' : 'https://www.yooc.me/group/{}/course/{}'
         }
         self.session = Session()
         self.csrf_token = self.__get_csrf_token()
@@ -142,5 +144,23 @@ class YoocBot:
     
     def get_exam_list(self):
         res = self.session.get(self.urlmap['exam_list_1'].format(self.groupid)).content.decode('utf-8')
-        res = re.findall(self.urlmap['exam_list_2'].format(self.groupid),res)
+        res = set(re.findall(self.urlmap['exam_list_2'].format(self.groupid),res))
         return res
+
+    def get_course_list(self):
+        page_num = 1
+        ret = set()
+
+        res = self.session.get(self.urlmap['course_list'].format(self.groupid,page_num)).content.decode('utf-8')
+        res = set(re.findall(self.urlmap['course_item'].format(self.groupid,'(\d{6})'),res))
+        while len(res) != 0:
+            page_num += 1
+            for course in res:
+                ret.add(course)
+            res = self.session.get(self.urlmap['course_list'].format(self.groupid,page_num)).content.decode('utf-8')
+            res = set(re.findall(self.urlmap['course_item'].format(self.groupid,'(\d{6})'),res))
+            
+        return ret
+
+    def compile_course(self,courseid:str):
+        self.session.get(self.urlmap['course_item'].format(self.groupid,courseid))
