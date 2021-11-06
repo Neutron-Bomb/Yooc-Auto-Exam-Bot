@@ -1,3 +1,6 @@
+# 2021/11/6停更说明
+程序仍然可以使用，请自行抓包，并修改[91](https://github.com/Neutron-Bomb/Yooc-Auto-Exam-Bot/blob/master/erohal/yooc.py#L91)/[99](https://github.com/Neutron-Bomb/Yooc-Auto-Exam-Bot/blob/master/erohal/yooc.py#L99)/[113](https://github.com/Neutron-Bomb/Yooc-Auto-Exam-Bot/blob/master/erohal/yooc.py#L113)行处的特征值。本程序永久停更。
+
 # Yooc-Auto-Exam-Bot
 自动完成浙理易班考试，实现了自动保存答案，验证码自动识别等操作  
 
